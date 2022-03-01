@@ -29,22 +29,11 @@ namespace ConsoleUI
             }
         }
 
-        public static double GetADouble(string message)
+        public static void PrintResultMessage(string message)
         {
-            Console.Write(message);
-            string numberText = Console.ReadLine();
-            double output;
-
-            bool isDouble = double.TryParse(numberText, out output);
-
-            while (isDouble == false)
-            {
-                Console.WriteLine("That was not a valid number! Please try again.");
-                Console.Write(message);
-                numberText = Console.ReadLine();
-
-                isDouble = double.TryParse(numberText, out output);
-            }
+            Console.WriteLine(message);
+            Console.WriteLine();
+            Console.WriteLine("Thank you for using our app to calculate for you.");
         }
     }
 }
